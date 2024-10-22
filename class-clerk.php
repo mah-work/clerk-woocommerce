@@ -18,6 +18,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+add_action('admin_menu', 'clerk_plugin_menu');
+
+function clerk_plugin_menu() {
+	add_menu_page(
+		'Data Sync',         // Page title
+		'Data Sync',         // Menu title
+		'manage_options',    // Capability
+		'data_sync',         // Menu slug
+		'data_sync_page',    // Function to display the page content
+		'dashicons-admin-tools', // Icon URL (optional)
+		6                    // Position (optional)
+	);
+}
+
 if ( ! class_exists( 'Clerk' ) ) {
 
 	/**
@@ -84,20 +99,6 @@ if ( ! class_exists( 'Clerk' ) ) {
 					load_plugin_textdomain( 'clerk', false, plugin_basename( dirname( __FILE__ ) ) . '/i18n/languages' );
 				}
 			);
-
-			add_action('admin_menu', 'clerk_plugin_menu');
-
-			function clerk_plugin_menu() {
-				add_menu_page(
-					'Data Sync',         // Page title
-					'Data Sync',         // Menu title
-					'manage_options',    // Capability
-					'data_sync',         // Menu slug
-					'data_sync_page',    // Function to display the page content
-					'dashicons-admin-tools', // Icon URL (optional)
-					6                    // Position (optional)
-				);
-			}
 		}
 	}
 
