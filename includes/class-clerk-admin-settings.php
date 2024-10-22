@@ -89,6 +89,8 @@ class Clerk_Admin_Settings {
 	 */
 	public function settings_init() {
 
+		private $section_titles = array();
+
 		// register a new setting.
 		$pll_languages = clerk_pll_languages_list();
 		if ( $pll_languages ) {
@@ -115,8 +117,8 @@ class Clerk_Admin_Settings {
 
 		add_settings_section(
 			'clerk_marky_section',
-			__( 'MarkyMark Section', 'clerk' ),
-			array( $this, 'eg_function_check' ),
+			__( 'Welcome to Clerk.io', 'clerk' ),
+			array( $this, 'display_section_menu' ),
 			'clerk'
 		);
 		
@@ -1215,6 +1217,24 @@ class Clerk_Admin_Settings {
 			<span>Test</span>
 		<?php
 	}
+
+	/*
+		Testing Header Menu
+	*/
+
+	public function add_section_title($id, $title) {
+        $this->section_titles[$id] = $title;
+    }
+
+	public function display_section_menu() {
+        if ( ! empty( $this->section_titles ) ) {
+            echo '<ul>';
+            foreach ( $this->section_titles as $id => $title ) {
+                echo '<li><a href="#' . esc_attr( $id ) . '">' . esc_html( $title ) . '</a></li>';
+            }
+            echo '</ul>';
+        }
+    }
 
 	/**
 	 * Add Clerk Plugin Version
