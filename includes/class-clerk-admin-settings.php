@@ -115,7 +115,7 @@ class Clerk_Admin_Settings {
 
 		// Add a new section test
 		add_settings_section(
-			'clerk_section_general',
+			'clerk_lilben_section',
 			__( 'Ben & Lil', 'clerk' ),
 			null,
 			'clerk'
