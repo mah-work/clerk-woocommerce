@@ -226,6 +226,9 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_datasync_products', __( 'Data Sync: Products', 'clerk' ) );
+
 		add_settings_field(
 			'realtime_updates',
 			__( 'Use Real-time Updates', 'clerk' ),
@@ -301,6 +304,9 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_datasync_pages', __( 'Data Sync: Pages', 'clerk' ) );
+
 		add_settings_field(
 			'realtime_updates_pages',
 			__( 'Use Real-time Updates', 'clerk' ),
@@ -354,6 +360,9 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_datasync_customers', __( 'Data Sync: Customers', 'clerk' ) );
+
 		add_settings_field(
 			'customer_sync_enabled',
 			__( 'Include Customers', 'clerk' ),
@@ -418,6 +427,9 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_datasync_orders', __( 'Data Sync: Orders', 'clerk' ) );
+
 		add_settings_field(
 			'disable_order_synchronization',
 			__( 'Disable Order Synchronization', 'clerk' ),
@@ -437,6 +449,8 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_livesearch', __( 'Live Search', 'clerk' ) );
 
 		add_settings_field(
 			'livesearch_enabled',
@@ -587,6 +601,8 @@ class Clerk_Admin_Settings {
 			'clerk'
 		);
 
+		$this->add_section_title( 'clerk_section_search', __( 'Search Page', 'clerk' ) );
+
 		add_settings_field(
 			'search_enabled',
 			__( 'Enabled', 'clerk' ),
@@ -710,6 +726,8 @@ class Clerk_Admin_Settings {
 			'clerk'
 		);
 
+		$this->add_section_title( 'clerk_faceted_navigation', __( 'Search Page: Facets', 'clerk' ) );
+
 		add_settings_field(
 			'faceted_navigation_enabled',
 			__( 'Enabled', 'clerk' ),
@@ -762,6 +780,8 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_powerstep', __( 'Powerstep', 'clerk' ) );
 
 		add_settings_field(
 			'powerstep_enabled',
@@ -891,6 +911,8 @@ class Clerk_Admin_Settings {
 			'clerk'
 		);
 
+		$this->add_section_title( 'clerk_section_exit_intent', __( 'Exit Intent', 'clerk' ) );
+
 		add_settings_field(
 			'exit_intent_enabled',
 			__( 'Enabled', 'clerk' ),
@@ -922,6 +944,8 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_category', __( 'Category Settingss', 'clerk' ) );
 
 		add_settings_field(
 			'category_enabled',
@@ -979,6 +1003,8 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_product', __( 'Product Settingss', 'clerk' ) );
 
 		add_settings_field(
 			'product_enabled',
@@ -1043,11 +1069,13 @@ class Clerk_Admin_Settings {
 
 		// Add cart section.
 		add_settings_section(
-			'clerk_section_cart',
+			'c',
 			__( 'Cart Settings', 'clerk' ),
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'v', __( 'Cart Settings', 'clerk' ) );
 
 		add_settings_field(
 			'cart_enabled',
@@ -1106,6 +1134,8 @@ class Clerk_Admin_Settings {
 			'clerk'
 		);
 
+		$this->add_section_title( 'clerk_section_additional_scripts', __( 'Additional Scripts', 'clerk' ) );
+
 		add_settings_field(
 			'clerk_additional_scripts_enabled',
 			__( 'Enabled', 'clerk' ),
@@ -1138,6 +1168,8 @@ class Clerk_Admin_Settings {
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_log', __( 'Clerk error logging', 'clerk' ) );
 
 		add_settings_field(
 			'log_enabled',
