@@ -116,18 +116,10 @@ class Clerk_Admin_Settings {
 		add_settings_section(
 			'clerk_marky_section',
 			__( 'MarkyMark Section', 'clerk' ),
-			'eg_function_check',
+			array( $this, 'eg_function_check' ),
 			'clerk'
 		);
 		
-		// Add a new section test
-		add_settings_section(
-			'clerk_lilben_section',
-			__( 'Ben & Lil', 'clerk' ),
-			null,
-			'clerk'
-		);
-
 		// Add general section.
 		add_settings_section(
 			'clerk_section_general',
