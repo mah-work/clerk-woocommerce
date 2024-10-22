@@ -122,13 +122,17 @@ class Clerk_Admin_Settings {
 			'clerk'
 		);
 		
+		$this->add_section_title( 'clerk_welcome_header_menu', __( 'Welcome to Clerk.io', 'clerk' ) );
+
 		// Add general section.
 		add_settings_section(
 			'clerk_section_general',
-			__( 'General Two', 'clerk' ),
+			__( 'General', 'clerk' ),
 			null,
 			'clerk'
 		);
+
+		$this->add_section_title( 'clerk_section_general', __( 'General', 'clerk' ) );
 
 		add_settings_field(
 			'version',
