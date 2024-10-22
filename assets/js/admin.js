@@ -19,6 +19,11 @@
  * Form Submission Shortcut Admin
  */
     console.log('Hello World');
+    let formContainer = document.querySelector('#clerkAdminForm');
+    let allTables = formContainer.querySelectorAll('.form-table');
+    allTables.forEach(table =>{
+        table.style.display="none;";
+    });
 
     const clerk_submit_admin_form = () => {
         document.querySelector('#submit').click();
