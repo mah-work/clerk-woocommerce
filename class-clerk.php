@@ -84,6 +84,17 @@ if ( ! class_exists( 'Clerk' ) ) {
 					load_plugin_textdomain( 'clerk', false, plugin_basename( dirname( __FILE__ ) ) . '/i18n/languages' );
 				}
 			);
+			add_action('admin_menu','clerk_plugin_menu');
+			function clerk_plugin_menu(){
+				add_menu_page(
+					'Connection',
+					'Data Sync',
+					'Search',
+					'Recommendations',
+					'Additional Scripts',
+					'Logging'
+				);
+			}
 		}
 	}
 

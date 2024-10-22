@@ -1169,7 +1169,7 @@ class Clerk_Admin_Settings {
 			'clerk'
 		);
 
-		$this->add_section_title( 'clerk_section_log', __( 'Clerk error logging', 'clerk' ) );
+		$this->add_section_title( 'clerk_section_log', __( 'Clerk Error Logging', 'clerk' ) );
 
 		add_settings_field(
 			'log_enabled',
