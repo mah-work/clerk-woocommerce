@@ -1222,10 +1222,6 @@ class Clerk_Admin_Settings {
 		Testing Header Menu
 	*/
 
-	public function add_section_title($id, $title) {
-        $this->section_titles[$id] = $title;
-    }
-
 	/**
 	 * Add Clerk Plugin Version
 	 */
