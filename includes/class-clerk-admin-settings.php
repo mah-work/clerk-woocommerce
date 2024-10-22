@@ -113,6 +113,13 @@ class Clerk_Admin_Settings {
 
 		$options = clerk_get_options();
 
+		add_settings_section(
+			'clerk_marky_section',
+			__( 'MarkyMark Section', 'clerk' ),
+			null,
+			'clerk'
+		);
+		
 		// Add a new section test
 		add_settings_section(
 			'clerk_lilben_section',
