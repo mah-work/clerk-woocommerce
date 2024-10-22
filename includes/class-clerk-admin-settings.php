@@ -124,7 +124,7 @@ class Clerk_Admin_Settings {
 		// Add general section.
 		add_settings_section(
 			'clerk_section_general',
-			__( 'General', 'clerk' ),
+			__( 'General Two', 'clerk' ),
 			null,
 			'clerk'
 		);
