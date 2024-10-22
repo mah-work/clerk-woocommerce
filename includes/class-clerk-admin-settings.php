@@ -116,7 +116,7 @@ class Clerk_Admin_Settings {
 		add_settings_section(
 			'clerk_marky_section',
 			__( 'MarkyMark Section', 'clerk' ),
-			null,
+			'eg_function_check',
 			'clerk'
 		);
 		
@@ -1216,6 +1216,12 @@ class Clerk_Admin_Settings {
 				'checked'   => 0,
 			)
 		);
+	}
+
+	public function eg_function_check(){
+		?>
+			<span>Test</span>
+		<?php
 	}
 
 	/**
