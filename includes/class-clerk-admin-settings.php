@@ -113,6 +113,14 @@ class Clerk_Admin_Settings {
 
 		$options = clerk_get_options();
 
+		// Add a new section test
+		add_settings_section(
+			'clerk_section_general',
+			__( 'Ben & Lil', 'clerk' ),
+			null,
+			'clerk'
+		);
+
 		// Add general section.
 		add_settings_section(
 			'clerk_section_general',
