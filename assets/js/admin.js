@@ -18,10 +18,12 @@
 /**
  * Form Submission Shortcut Admin
  */
+    console.log('Hello World');
 
     const clerk_submit_admin_form = () => {
         document.querySelector('#submit').click();
     }
+
     const admin_form = document.querySelector('form#clerkAdminForm');
     if (admin_form) {
         admin_form.addEventListener(
