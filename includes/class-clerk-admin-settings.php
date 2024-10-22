@@ -1216,6 +1216,16 @@ class Clerk_Admin_Settings {
         $this->section_titles[$id] = $title;
     }
 	
+	public function display_section_menu() {
+        if ( ! empty( $this->section_titles ) ) {
+            echo '<ul>';
+            foreach ( $this->section_titles as $id => $title ) {
+                echo '<li><a href="#' . esc_attr( $id ) . '">' . esc_html( $title ) . '</a></li>';
+            }
+            echo '</ul>';
+        }
+    }
+
 	public function eg_function_check(){
 		?>
 			<span>Test</span>
