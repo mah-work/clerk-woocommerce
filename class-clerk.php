@@ -18,6 +18,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+add_action(
+	'admin_menu',
+	function clerk_plugin_menu() {
+		add_submenu_page(
+			'clerk',                 // Parent slug
+			'Data Sync',             // Page title
+			'Data Sync',             // Menu title
+			'manage_options',        // Capability
+			'data_sync',             // Menu slug
+			'data_sync_page'         // Function to display the submenu content
+		);
+	}
+);
+
 if ( ! class_exists( 'Clerk' ) ) {
 
 	/**
@@ -84,19 +98,6 @@ if ( ! class_exists( 'Clerk' ) ) {
 					load_plugin_textdomain( 'clerk', false, plugin_basename( dirname( __FILE__ ) ) . '/i18n/languages' );
 				}
 			);
-
-			add_action('admin_menu',
-			function clerk_plugin_menu() {
-				add_submenu_page(
-					'clerk',                 // Parent slug
-					'Data Sync',             // Page title
-					'Data Sync',             // Menu title
-					'manage_options',        // Capability
-					'data_sync',             // Menu slug
-					'data_sync_page'         // Function to display the submenu content
-				);
-			}
-		);
 		}
 	}
 
