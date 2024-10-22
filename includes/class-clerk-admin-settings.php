@@ -116,9 +116,9 @@ class Clerk_Admin_Settings {
 		$options = clerk_get_options();
 
 		add_settings_section(
-			'clerk_marky_section',
+			'clerk_welcome_header_menu',
 			__( 'Welcome to Clerk.io', 'clerk' ),
-			array( $this, 'eg_function_check' ),
+			array( $this, 'display_section_menu' ),
 			'clerk'
 		);
 		
