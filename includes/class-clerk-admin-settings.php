@@ -89,6 +89,8 @@ class Clerk_Admin_Settings {
 	 */
 	public function settings_init() {
 
+		 private $section_titles = array();
+
 		// register a new setting.
 		$pll_languages = clerk_pll_languages_list();
 		if ( $pll_languages ) {
