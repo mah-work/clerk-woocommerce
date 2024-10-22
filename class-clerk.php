@@ -22,7 +22,7 @@ add_action(
 	'admin_menu',
 	function clerk_plugin_menu() {
 		add_submenu_page(
-			'clerk',                 // Parent slug
+			'Clerk',                 // Parent slug
 			'Data Sync',             // Page title
 			'Data Sync',             // Menu title
 			'manage_options',        // Capability
