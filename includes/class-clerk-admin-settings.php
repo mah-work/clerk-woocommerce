@@ -1212,6 +1212,10 @@ class Clerk_Admin_Settings {
 		);
 	}
 
+	public function add_section_title($id, $title) {
+        $this->section_titles[$id] = $title;
+    }
+	
 	public function eg_function_check(){
 		?>
 			<span>Test</span>
